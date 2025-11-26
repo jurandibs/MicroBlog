@@ -20,9 +20,12 @@ O **MicroBlog** tem como objetivo oferecer uma plataforma simplificada de microb
 - Pasta `src/`:
   - `src/main/java`: Código-fonte Java, contendo controladores, serviços e entidades do sistema.
   - `src/main/resources`: Recursos estáticos e configurações.
+- Pasta `frontend/`: Código-fonte do frontend em React.
 - Arquivos de configuração `.gitattributes` e `.gitignore`.
 
 ## Como realizar a build e executar o projeto
+
+### Backend (API)
 
 1. **Pré-requisitos:**
    - Java 17 ou superior instalado.
@@ -58,6 +61,35 @@ O **MicroBlog** tem como objetivo oferecer uma plataforma simplificada de microb
    ```
 
    A aplicação deverá subir na porta padrão (geralmente 8080).
+
+### Frontend (Interface do Usuário)
+
+1. **Pré-requisitos:**
+   - Node.js 18 ou superior instalado.
+   - npm (geralmente instalado com o Node.js).
+
+2. **Instalação das dependências:**
+
+   No terminal, navegue até a pasta `frontend` e execute:
+
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+3. **Execução da aplicação:**
+
+   Após a instalação das dependências, execute:
+
+   ```bash
+   npm run dev
+   ```
+
+   A aplicação frontend estará disponível em `http://localhost:5173`.
+
+## Aplicação em Funcionamento
+
+![Screenshot da Aplicação](screenshot.png)
 
 ## Contribuição
 
