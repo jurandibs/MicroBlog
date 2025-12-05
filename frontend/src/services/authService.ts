@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LoginRequest, RegisterRequest } from '../types';
+import type { LoginRequest, RegisterRequest } from '../types';
 
 const API_URL = 'http://localhost:8080/auth';
 

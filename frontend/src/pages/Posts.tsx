@@ -1,5 +1,5 @@
 import { usePosts } from '../hooks/usePosts';
-import { Post } from '../types';
+import type { Post } from '../types';
 
 export default function Posts() {
   const { posts, isLoadingPosts, postsError, deletePost } = usePosts();
