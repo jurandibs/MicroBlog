@@ -33,4 +33,19 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
     }
 
+    @ExceptionHandler(java.lang.Exception.class)
+    public ResponseEntity<Exception> handleAll(java.lang.Exception e, HttpServletRequest request) {
+        logger.error("Internal Server Error", e);
+        e.printStackTrace(); // Print to stdout
+
+        Exception err = new Exception();
+        err.setTimestamp(Instant.now());
+        err.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        err.setError("Internal Server Error");
+        err.setMessage(e.getMessage());
+        err.setPath(request.getRequestURI());
+
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(err);
+    }
+
 }

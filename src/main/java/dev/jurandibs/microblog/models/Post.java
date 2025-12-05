@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "Post")
+@Table(name = "posts")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,8 +16,10 @@ public class Post {
     private String content;
     private Date date;
     @ManyToOne
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private User userId;
     @OneToMany
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<Tag> tagId;
 
     public Post() {

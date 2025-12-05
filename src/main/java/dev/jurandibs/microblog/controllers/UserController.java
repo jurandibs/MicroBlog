@@ -21,7 +21,7 @@ public class UserController {
     private UserServiceV2 userServiceV2;
 
     @PostMapping("/save")
-    private @ResponseBody User save(@RequestBody User user){
+    public @ResponseBody User save(@RequestBody User user){
         return userService.save(user);
     }
 

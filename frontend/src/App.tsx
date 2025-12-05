@@ -4,9 +4,12 @@ import Register from './pages/Register';
 import Posts from './pages/Posts';
 import ProtectedRoute from './components/ProtectedRoute';
 
-function App() {
+function HomeRedirect() {
   const token = localStorage.getItem('token');
+  return <Navigate to={token ? "/posts" : "/login"} />;
+}
 
+function App() {
   return (
     <Router>
       <Routes>
@@ -15,7 +18,7 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="/posts" element={<Posts />} />
         </Route>
-        <Route path="/" element={<Navigate to={token ? "/posts" : "/login"} />} />
+        <Route path="/" element={<HomeRedirect />} />
       </Routes>
     </Router>
   );

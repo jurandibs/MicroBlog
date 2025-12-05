@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Post } from '../types';
+import type { Post } from '../types';
 
 const API_URL = 'http://localhost:8080/posts';
 

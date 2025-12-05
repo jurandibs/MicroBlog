@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { LoginRequest, RegisterRequest } from '../types';
+import type { LoginRequest, RegisterRequest } from '../types';
 
-const API_URL = 'http://localhost:8080/auth';
+const API_URL = 'http://localhost:8080';
 
 const login = async (data: LoginRequest) => {
   const response = await axios.post(`${API_URL}/login`, data);
@@ -12,7 +12,7 @@ const login = async (data: LoginRequest) => {
 };
 
 const register = async (data: RegisterRequest) => {
-  const response = await axios.post(`${API_URL}/register`, data);
+  const response = await axios.post(`${API_URL}/users/save`, data);
   return response.data;
 };
 
