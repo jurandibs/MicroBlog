@@ -3,7 +3,7 @@ package dev.jurandibs.microblog.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Tag")
+@Table(name = "tags")
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

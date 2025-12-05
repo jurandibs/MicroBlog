@@ -32,7 +32,8 @@ public class SecurityFilter extends OncePerRequestFilter {
             "/swagger-ui",
             "/swagger-ui.html",
             "/swagger-ui/**",
-            "/login"
+            "/login",
+            "/users/save"
     };
 
     @Override
