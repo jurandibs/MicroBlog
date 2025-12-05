@@ -59,6 +59,16 @@ O **MicroBlog** tem como objetivo oferecer uma plataforma simplificada de microb
 
    A aplicação deverá subir na porta padrão (geralmente 8080).
 
+## Screenshots
+
+| Login                  | Cadastro               | Feed vazio             |
+|------------------------|------------------------|------------------------|
+| ![Login](./screenshots/login.png) | ![Cadastro](./screenshots/register.png) | ![Feed vazio](./screenshots/posts-empty.png) |
+
+| Criando post           | Feed com posts         |
+|------------------------|------------------------|
+| ![Criando post](./screenshots/create-post.png) | ![Feed com posts](./screenshots/posts-with-data.png) |
+
 ## Contribuição
 
 Sinta-se à vontade para abrir issues ou pull requests!
